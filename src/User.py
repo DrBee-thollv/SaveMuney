@@ -1,6 +1,6 @@
 
-import BankAcc
-import Category
+from BankAcc import BankAcc
+from Category import Category
 
 class User:
     """
@@ -13,7 +13,8 @@ class User:
     def __init__(self, username):
         self.bank = BankAcc()
         self.categories = []
-        SetUsername(username)
+        self.username = username
+        print("You have created a user named: ", username)
 
 
     """
@@ -24,7 +25,7 @@ class User:
         LogIn: List containing username and password for users' bank acc
         URL: web link leading to the users bank
     """
-    def SetBank(LogIn, URL):
+    def SetBank(self, LogIn, URL):
         self.bank = BankAcc(LogIn, URL)
 
 
@@ -46,7 +47,7 @@ class User:
         ------------------------------------
         username: The username to be assigned
     """
-    def SetUsername(username):
+    def SetUsername(self, username):
         self.username = username
     
 
@@ -68,7 +69,7 @@ class User:
         ------------------------------------
         info: a list containing the parameters to set the new category being added
     """
-    def AddCategory(info):
+    def AddCategory(self, info):
         self.categories.append(Category(info))
 
 
@@ -78,12 +79,13 @@ class User:
         Parameters
         ------------------------------------
         name: The name of the category to delete
-
-        Return
-        ------------------------------------
     """
-    def RemoveCategory(name):
-        pass
+    def RemoveCategory(self, name):
+        for cat in self.categories:
+            if(name == cat.name):
+                self.categories.remove(cat)
+                print("Category: " + name + " was removed.")
+        print("Category: " + name + " could not be removed.")
 
 
 

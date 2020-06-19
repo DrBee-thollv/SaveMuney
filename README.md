@@ -47,3 +47,25 @@ Below is a basic skeleton on how the class system works within the program. Each
     </ul>
 </details>
 
+## <b>Features</b>
+
+<details>
+<summary><input type="checkbox" disabled>Basic Functionality<br></summary>
+<ul>
+    <input type="checkbox" disabled>Create user and category class<br>
+    <input type="checkbox" disabled>Create addition and removal functions of categories<br>
+    <input type="checkbox" disabled>Have setters and getters for category class<br>
+</ul>
+</details>
+
+<details>
+<summary><input type="checkbox" disabled>Create basic gui application<br></summary>
+<ul>
+    <input type="checkbox" disabled>Create Log in Page<br>
+    <input type="checkbox" disabled>Display user categories neatly<br>
+    <input type="checkbox" disabled>Have add and remove categorie options on gui<br>
+    <input type="checkbox" disabled>Display addition and subtraction of categories<br>
+</ul>
+</details>
+
+<input type="checkbox" disabled>Link bank account and automatically update their budget<br>

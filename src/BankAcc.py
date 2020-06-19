@@ -9,8 +9,8 @@ class BankAcc:
         ------------------------------------
         username: username to set the users account to
     """
-    def __init__(self, LogIn, URL):
-        self.username = LogIn[0]
-        self.password = LogIn[1]
-        self.url = URL
+    def __init__(self):
+        self.username = ""
+        self.password = ""
+        self.url = ""
         self.statements = []
