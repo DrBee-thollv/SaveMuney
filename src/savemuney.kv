@@ -1,0 +1,51 @@
+#: kivy 1.10.1
+
+
+<LogIn>
+    GridLayout:
+        cols: 2
+        size_hint: (None, None)
+        size: root.width / 4, root.height / 10
+        pos: ((root.width / 2) - 100, (root.height / 2) - 50)
+            
+        Button:
+            text: "New User"
+            on_press: root.manager.current = 'new'
+            
+        Button: 
+            text: "Existing User"
+            on_press: root.manager.current = 'existing'
+
+<NewUser>
+    GridLayout:
+        rows: 2
+        size_hint: (None, None)
+        size: root.width / 4, root.height / 10
+        pos: ((root.width / 2) - 100, (root.height / 2) - 50)
+
+        TextInput:
+
+        Button:
+            text: "Add User"
+    
+    Button:
+        pos: (0, root.height - 75)
+        size: (100, 75)
+        text: "Back"
+        on_press: root.manager.current = "login"
+
+
+<ExistingUser>
+    GridLayout:
+        cols: 1
+        size_hint: (None, None)
+        size: root.width / 4, root.height / 10
+        pos: ((root.width / 2) - 100, (root.height / 2) - 50)
+
+        DropDown:
+
+    Button:
+        pos: (0, root.height - 75)
+        size: (100, 75)
+        text: "Back"
+        on_press: root.manager.current = "login"

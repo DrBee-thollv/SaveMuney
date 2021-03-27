@@ -3,12 +3,12 @@ from BankAcc import BankAcc
 from Category import Category
 
 class User:
-    """
-        Default constructor for user class
+    """Default constructor for user class
 
-        Parameters
-        ------------------------------------
-        username: username to set the users account to
+    Parameters
+    ------------------------------------
+    username : str
+        username to set the users account to
     """
     def __init__(self, username):
         self.bank = BankAcc()
@@ -17,70 +17,71 @@ class User:
         print("You have created a user named: ", username)
 
 
-    """
-        Setter for users Bank Account 
+    def SetBank(self, LogIn, URL):
+        """Setter for users Bank Account 
 
         Parameters
         ------------------------------------
-        LogIn: List containing username and password for users' bank acc
-        URL: web link leading to the users bank
-    """
-    def SetBank(self, LogIn, URL):
+        LogIn : str
+            List containing username and password for users' bank acc
+
+        URL : str
+            web link leading to the users bank
+        """
         self.bank = BankAcc(LogIn, URL)
 
 
-    """
-        Getter for users bank class instance
+    def GetBank():
+        """Getter for users bank class instance
 
         Return
         ------------------------------------
-        returns instance of users bank
-    """
-    def GetBank():
+            returns instance of users bank
+        """
         return self.bank
 
 
-    """
-        Setter for users username
+    def SetUsername(self, username):
+        """Setter for users username
 
         Parameters
         ------------------------------------
-        username: The username to be assigned
-    """
-    def SetUsername(self, username):
+        username : str
+            The username to be assigned
+        """
         self.username = username
     
 
-    """
-        Getter for the users username
+    def GetUsername():
+        """Getter for the users username
 
         Return
         ------------------------------------
-        returns string of users username
-    """
-    def GetUsername():
+            returns string of users username
+        """
         return self.username
 
 
-    """
-        Appends a new instance of category to the users account
+    def AddCategory(self, info):
+        """Appends a new instance of category to the users account
 
         Parameters
         ------------------------------------
-        info: a list containing the parameters to set the new category being added
-    """
-    def AddCategory(self, info):
+        info : 
+            a list containing the parameters to set the new category being added
+        """
         self.categories.append(Category(info))
 
 
-    """
-        Removes instance of category from users account
+    def RemoveCategory(self, name):
+        """Removes instance of category from users account
 
         Parameters
         ------------------------------------
-        name: The name of the category to delete
-    """
-    def RemoveCategory(self, name):
+        name : str
+            The name of the category to delete
+        """
+        # self.categories.remove(cat) for cat in self.categories if name == cat.name
         for cat in self.categories:
             if(name == cat.name):
                 self.categories.remove(cat)
